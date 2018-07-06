@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/senepote/Comic_Store/issues"
   },
-  "homepage": "https://github.com/senepote/Comic_Store#readme"
+  "homepage": "https://github.com/senepote/Comic_Store#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
