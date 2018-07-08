@@ -10,12 +10,15 @@
       <div id="container">
         <div class="comics">
           <% for(let i = 0; i < comics.length; i++){ %>
+            <div class="comic">
 
-
-
-
-
-
+            <br/>
+              <a href="/comics/<%=comics[i].id%>">
+              <img src="<%=comics[i].img%>">
+              </a>
+            <br/>
+              <h3><%=comics[i].name%></h3>
+            </div>
           <% } %>
         </div>
       </div>

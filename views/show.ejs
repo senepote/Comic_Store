@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+    <div id="container">
+    <div class="comics">
+      <div class="comic">
+        <h3><%=comics.name%></h3>
+        <img src="<%=comics.img%>" alt="">
+        <p><%=comics.description%></p>
+        <h4><%=comics.price%></h4>
+        <h4><%=comics.qty%></h4>
+
+        <button class="buybutton">Buy Now</button>
+        <form action="/comics/<%=comics.id%>?_method=DELETE" method="post">
+          <input type="submit" value="Delete"/>
+        </form>
+      </div>
+    </div>
+    </div>
+    <nav>
+      <% include ../partials/footer %>
+    </nav>
+  </body>
+</html>

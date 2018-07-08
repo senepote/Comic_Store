@@ -19,21 +19,33 @@ module.exports =  [
         price:5,
         qty:5
       },{
-        name:'',
+        name:'X-Men #1 (1991)',
         description:'',
-        img:'',
+        img:'https://files1.comics.org//img/gcd/covers_by_id/975/w400/975045.jpg?-2383896702052759270',
         price:5,
         qty:5
       },{
-        name:'',
+        name:'X-Men #1 (2012)',
         description:'',
-        img:'',
+        img:'https://www.themarysue.com/wp-content/uploads/2013/01/XMenWomen.jpg',
         price:5,
         qty:5
       },{
-        name:'',
+        name:'X-men: Red #1',
         description:'',
-        img:'',
+        img:'https://vignette.wikia.nocookie.net/marveldatabase/images/9/9a/X-Men_Red_Vol_1_1.jpg/revision/latest?cb=20180202063915',
+        price:5,
+        qty:5
+      },{
+        name:'New X-Men #150',
+        description:'',
+        img:'https://d1466nnw0ex81e.cloudfront.net/n_iv/600/733435.jpg',
+        price:5,
+        qty:5
+      },{
+        name:'Uncanny X-Men #600',
+        description:'',
+        img:'https://vignette.wikia.nocookie.net/marveldatabase/images/9/92/Uncanny_X-Men_Vol_1_600_Yu_Variant.jpg/revision/latest?cb=20151002105617',
         price:5,
         qty:5
       }
