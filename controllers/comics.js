@@ -44,6 +44,10 @@ router.get('/',(req,res)=>{
     });
   });
 });
+//NEW ROUTE
+router.get('/new',(req,res)=>{
+  res.render('new.ejs');
+});
 
 //SHOW ROUTE
 router.get('/:id', (req,res)=>{
@@ -53,11 +57,6 @@ router.get('/:id', (req,res)=>{
     })
   })
 })
-
-//CREATE ROUTE
-router.get('/new',(req,res)=>{
-  res.render('new.ejs');
-});
 
 //CREATE POST
 router.post('/',(req,res)=>{
@@ -72,10 +71,11 @@ router.get('/:id/edit',(req,res)=>{
     res.render('edit.ejs', {comics: comics})
   })
 })
+
 //UPDATE
-comics.put('/:id', (req,res)=>{
+router.put('/:id', (req,res)=>{
   Comics.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, comics)=>{
-    res.redirect('/comics')
+    res.redirect('/comics' + comics.id)
   })
 })
 

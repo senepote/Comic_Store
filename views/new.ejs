@@ -4,17 +4,24 @@
     <% include ../partials/head %>
   </head>
   <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+    <div class="showcomic">
     <h1>Create Your Comic Here</h1>
       <p>Here's where you can get creative and add your own comic book cover to the collection!!</p>
       <form class="" action="/comics" method="post">
-        <input type="text" name="name" placeholder="name">
-        <input type="text" name="description" placeholder="description">
+        <input type="text" name="name" placeholder="name"><br/>
+        <input type="text" name="description" placeholder="description"><br/>
         <input type="text" name="img" placeholder="image">
-        <input type="number" name="price" value="0" placeholder="price">
-        <input type="number" name="qty" value="0" placeholder="quantity">
+        <input type="number" name="price" value="0" placeholder="price"><br/>
+        <input type="number" name="qty" value="0" placeholder="quantity"><br/>
+        <input type="submit" name="" value="Create your Comic Now">
       </form>
-      <footer>
-        <a href="/comics">Back to Main Page</a>
-      </footer>
+    <br/>
+    </div>
+      <nav>
+        <% include ../partials/footer %>
+      </nav>
   </body>
 </html>
