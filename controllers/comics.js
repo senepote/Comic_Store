@@ -34,17 +34,7 @@ const Comics = require('../models/comics.js');
 //   })
 // })
 
-//CREATE ROUTE
-router.get('/new',(req,res)=>{
-  res.render('new.ejs');
-});
-//DELETE ROUTE
-router.delete('/:id', (req,res)=>{
-  Comics.findByIdAndRemove(req.params.id, (err, comics)=>{
-    res.redirect('/comics');
-  })
-})
-//EDIT ROUTE
+
 
 //INDEX ROUTE
 router.get('/',(req,res)=>{
@@ -57,12 +47,32 @@ router.get('/',(req,res)=>{
 
 //SHOW ROUTE
 router.get('/:id', (req,res)=>{
-  Comics.findById(req.params.id, (err, foundComic)=>{
+  Comics.findById(req.params.id, (err, comics)=>{
     res.render('show.ejs', {
-      comics:foundComic
+      comics:comics
     })
   })
 })
+
+//CREATE ROUTE
+router.get('/new',(req,res)=>{
+  res.render('new.ejs');
+});
+
+//EDIT ROUTE
+router.get('/:id/edit',(req,res)=>{
+  Comics.findById(req.params.id, (err, comics)=>{
+    res.render('edit.ejs', {comics: comics})
+  })
+})
+
+//DELETE ROUTE
+router.delete('/:id', (req,res)=>{
+  Comics.findByIdAndRemove(req.params.id, (err, comics)=>{
+    res.redirect('/comics');
+  })
+})
+
 //ALT SEED
 const comicSeed = require('../models/seed.js')
 router.get('/seed', (req,res)=>{

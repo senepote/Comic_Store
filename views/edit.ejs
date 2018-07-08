@@ -5,10 +5,17 @@
   </head>
   <body>
     <h1>The Comic Edit Page</h1>
-            <!-- <input type="text" name="img" placeholder="image href" value="<%=comics.img %>"> -->
+    <form action="/comics/<%=comics.id%>?_method=PUT" method="POST">
+      <br/>
+      <input type="text" name="name" value="<%=comics.name%>" placeholder="Name"><br/>
+      <textarea type="text" name="description" value="<%=comics.description%>" placeholder="Description"></textarea><br/>
+      <input type="text" name="img" placeholder="image href" value="<%=comics.img %>"<br/>
+      <input type="text" name="price" value="<%=comics.price%>" placeholder="Price"><br/>
+      <input type="text" name="quantity" value="<%=comics.qty%>" placeholder="Quantity"><br/>
+      <br/>
+      <input type="submit" value="update">
+
+</form>
+
   </body>
 </html>
-
-
-
-        <!-- <input type="text" name="img" placeholder="image href: http;// or https://" value="<%=comics.img %>" pattern="http[s]*://.+" value="http://mrwgifs.com/wp-content/uploads/2013/04/Tepig-Crying-Sad-On-Pokemon-Gif_408x408.jpg"> -->
