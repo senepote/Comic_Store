@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Comic Creation Page</title>
+    <% include ../partials/head %>
   </head>
   <body>
     <h1>Create Your Comic Here</h1>
+      <p>Here's where you can get creative and add your own comic book cover to the collection!!</p>
+      <form class="" action="/comics" method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="description" placeholder="description">
+        <input type="text" name="img" placeholder="image">
+        <input type="number" name="price" value="0" placeholder="price">
+        <input type="number" name="qty" value="0" placeholder="quantity">
+      </form>
+      <footer>
+        <a href="/comics">Back to Main Page</a>
+      </footer>
   </body>
 </html>

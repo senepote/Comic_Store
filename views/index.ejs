@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Comics</title>
-    <link rel="stylesheet" href="/styles.css">
+    <% include ../partials/head %>
   </head>
   <body>
-    <header>
-      <h1>Comic Store</h1>
-    </header>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
       <div id="container">
         <div class="comics">
+          <% for(let i = 0; i < comics.length; i++){ %>
 
+
+
+
+
+
+          <% } %>
         </div>
       </div>
+      <nav>
+        <% include ../partials/footer %>
+      </nav>
   </body>
 </html>

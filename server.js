@@ -13,14 +13,15 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 // app.use(express.json());
 
+//CONTROLLER FILE
 const comicController = require('./controllers/comics.js');
 app.use('/comics', comicController);
 // app.get('/comics/new', (req,res)=>{
 //   res.render('new.ejs')
 // })
-app.get('/', (req,res)=>{
-  res.render('index.ejs')
-})
+// app.get('/', (req,res)=>{
+//   res.render('index.ejs')
+// })
 
 
 

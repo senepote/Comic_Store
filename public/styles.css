@@ -1,0 +1,43 @@
+.header {
+  background: black;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  text-align: center;
+  left:0;
+}
+
+body {
+  background-image: url("https://vignette.wikia.nocookie.net/marveldatabase/images/0/06/Jean_Grey_%28Earth-TRN240%29_from_All-New_X-Men_Vol_1_26_001.jpg/revision/latest?cb=20140430225721");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #4d0066;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 50px;
+  color: purple;
+  text-align: center;
+}
+a {
+  color: hotpink;
+}
+
+.footer {
+  background: black;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+}
