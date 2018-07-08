@@ -59,10 +59,23 @@ router.get('/new',(req,res)=>{
   res.render('new.ejs');
 });
 
+//CREATE POST
+router.post('/',(req,res)=>{
+  Comics.create(req.body, (err, comics)=>{
+    res.redirect('/comics/' + comics.id)
+  })
+})
+
 //EDIT ROUTE
 router.get('/:id/edit',(req,res)=>{
   Comics.findById(req.params.id, (err, comics)=>{
     res.render('edit.ejs', {comics: comics})
+  })
+})
+//UPDATE
+comics.put('/:id', (req,res)=>{
+  Comics.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, comics)=>{
+    res.redirect('/comics')
   })
 })
 

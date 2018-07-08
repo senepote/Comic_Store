@@ -4,6 +4,12 @@
     <% include ../partials/head %>
   </head>
   <body>
+    <nav>
+      <% include ../partials/header %>
+    </nav>
+  <div class="showcomic">
+
+
     <h1>The Comic Edit Page</h1>
     <form action="/comics/<%=comics.id%>?_method=PUT" method="POST">
       <br/>
@@ -14,8 +20,10 @@
       <input type="text" name="quantity" value="<%=comics.qty%>" placeholder="Quantity"><br/>
       <br/>
       <input type="submit" value="update">
-
-</form>
-
+    </form>
+      </div>
+    <nav>
+      <% include ../partials/footer %>
+    </nav>
   </body>
 </html>
