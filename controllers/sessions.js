@@ -8,7 +8,7 @@ router.get('/new', (req,res)=>{
 })
 
 router.post('/', (req,res)=>{
-  User.findOne({username: req.body.username}, (err, foundUser)=>{
+  User.findOne({ username: req.body.username}, (err, foundUser)=>{
     if(req.body.password == foundUser.password){
       res.session.currentUser = foundUser;
       res.redirect('/comics');

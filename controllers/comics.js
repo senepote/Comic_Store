@@ -3,36 +3,12 @@ const router = express.Router();
 const Comics = require('../models/comics.js');
 
 //SEED
-// router.get('/seed/seedingnewcomics', (req,res)=>{
-//   const newComics =
-//     [
-//       {
-//         name: 'X-Men #1 (1963)',
-//         description: 'The classic that started it all...',
-//         img:'https://vignette.wikia.nocookie.net/marvel/images/7/77/X-Men_-1.jpg/revision/latest?cb=20121011154900&path-prefix=fr',
-//         price: 300,
-//         qty: 1
-//       }
-//       ,{
-//         name:'Uncanny X-Men #1 (2012)',
-//         description:'',
-//         img:'https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/43540/DIG005800_1._SX360_QL80_TTD_.jpg',
-//         price:5,
-//         qty:5
-//       },{
-//         name:'Uncanny X-Force # 30 (alt cover)',
-//         description:'',
-//         img:'https://vignette.wikia.nocookie.net/marveldatabase/images/6/6b/Uncanny_X-Force_Vol_1_35_Simone_Bianchi_Variant.jpg/revision/latest?cb=20121214193122',
-//         price:5,
-//         qty:5
-//       }
-//     ]
-//     Comics.create(newComics, (err, comics) => {
-//       if (err) { console.log(err) }
-//       console.log('seeded..redirecting')
-//       res.redirect('/comics')
-//   })
-// })
+//JSON
+router.get('/json', (req,res) =>{
+  Comics.find({}, (err, allComics)=>{
+    res.send(allComics)
+  })
+})
 
 //INDEX ROUTE
 router.get('/',(req,res)=>{
@@ -42,6 +18,7 @@ router.get('/',(req,res)=>{
     });
   });
 });
+
 //NEW ROUTE
 router.get('/new',(req,res)=>{
   res.render('new.ejs');
@@ -59,7 +36,7 @@ router.get('/:id', (req,res)=>{
 //CREATE POST
 router.post('/',(req,res)=>{
   Comics.create(req.body, (err, comics)=>{
-    res.redirect('/comics/' + comics.id)
+    res.redirect('/comics' + comics.id)
   })
 })
 
@@ -70,10 +47,10 @@ router.get('/:id/edit',(req,res)=>{
   })
 })
 
-//UPDATE
+//UPDATE // PUT
 router.put('/:id', (req,res)=>{
   Comics.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, comics)=>{
-    res.redirect('/comics' + comics.id)
+    res.redirect('/comics/' + comics.id)
   })
 })
 
@@ -94,21 +71,10 @@ router.get('/seed', (req,res)=>{
   })
 })
 
-// router.get('/', (req,res)=>{
-//   res.render('index.ejs',{
-//     currentUser: req.session.currentUser
-//   })
+// router.post('/', (req,res) =>{
+//   console.log(req.body);
+//   let newComic = {}
 // })
-//
-// router.get('/comicapp', (req, res)=>{
-//   if(req.session.currentUser){
-//     res.send('main app working');
-//   } else {
-//     res.redirect('/sessions/new')
-//   }
-// })
-
-
 
 
 
