@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const methodOverride = require('method-override');
+const session = require('express-session');
+const bcrypt = require('bcrypt');
 
 const mongoose = require('mongoose');
 const mongoUri =  process.env.MONGODB_URI || 'mongodb://localhost:27017/grocery_app_dev';
@@ -12,18 +14,20 @@ app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 // app.use(express.json());
+//SESSIONS
+app.use(session({
+  secrete: "purplemonkeydishwasher",
+  resave: false,
+  saveUninitialized: false
+}));
 
 //CONTROLLER FILE
 const comicController = require('./controllers/comics.js');
 app.use('/comics', comicController);
-// app.get('/comics/new', (req,res)=>{
-//   res.render('new.ejs')
-// })
-// app.get('/', (req,res)=>{
-//   res.render('index.ejs')
-// })
-
-
+const userController = require('./controllers/users.js')
+app.use('/users', userController);
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 app.listen(PORT, ()=>{
   console.log('listening...');

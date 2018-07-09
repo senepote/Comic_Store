@@ -34,8 +34,6 @@ const Comics = require('../models/comics.js');
 //   })
 // })
 
-
-
 //INDEX ROUTE
 router.get('/',(req,res)=>{
   Comics.find({}, (err,allComics)=>{
