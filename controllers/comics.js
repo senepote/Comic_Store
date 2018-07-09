@@ -94,9 +94,19 @@ router.get('/seed', (req,res)=>{
   })
 })
 
-
-
-
+// router.get('/', (req,res)=>{
+//   res.render('index.ejs',{
+//     currentUser: req.session.currentUser
+//   })
+// })
+//
+// router.get('/comicapp', (req, res)=>{
+//   if(req.session.currentUser){
+//     res.send('main app working');
+//   } else {
+//     res.redirect('/sessions/new')
+//   }
+// })
 
 
 

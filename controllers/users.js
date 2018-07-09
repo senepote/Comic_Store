@@ -3,15 +3,15 @@ const router = express.Router();
 const User = require('../models/users.js');
 const bcrypt = require('bcrypt');
 
-router.get('/newuser', (req,res)=>{
+router.get('/new', (req,res)=>{
   res.render('users/new.ejs');
 })
 
 router.post('/', (req,res)=>{
-  req.body.password = bcrypt.hasSynch(req.body.password, bcrypt.genSaltSynch(10));
   User.create(req.body, (err, createdUser)=>{
     res.redirect('/');
   });
 });
+
 
 module.exports = router;
