@@ -9,7 +9,7 @@ router.get('/new', (req,res)=>{
 
 router.post('/', (req,res)=>{
   User.create(req.body, (err, createdUser)=>{
-    res.redirect('/');
+    res.redirect('/comics');
   });
 });
 
