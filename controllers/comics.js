@@ -36,7 +36,7 @@ router.get('/:id', (req,res)=>{
 //CREATE POST
 router.post('/',(req,res)=>{
   Comics.create(req.body, (err, comics)=>{
-    res.redirect('/comics' + comics.id)
+    res.redirect('/comics/' + comics.id)
   })
 })
 

@@ -32,13 +32,12 @@ h1 {
   text-shadow: 1px 1px 4px #0073e6;
   font-family: 'Amatic SC', cursive;
 }
-a {
+.nav-buttons {
   color: hotpink;
-  /* padding-left: 6px;
-  padding-right: 6px; */
+  padding-left: 6px;
+  padding-right: 6px;
 }
-
-a:hover {
+.nav-buttons:hover {
   color: #0073e6;
   font-size: 50px;
 }
