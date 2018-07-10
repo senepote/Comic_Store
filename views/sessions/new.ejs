@@ -2,14 +2,35 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Sign In</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     </head>
     <body>
+      <nav>
+        <div class="header">
+          <h1>Comic Store</h1>
+          <nav class="sign-in">
+            <a href="/users/new">Register</a>
+            <a href="/sessions/new">Log In</a>
+        </div>
+      </nav>
+
+      <div id="container">
+      <div class="user">
         <h1>Sign In</h1>
         <form action="/sessions" method="POST">
             <input type="text" name="username" placeholder="username">
             <input type="password" name="password" />
             <input type="submit" value="Log In" />
         </form>
+      </div>
+      </div>
+      <nav>
+        <div class="footer">
+          <a href="/comics/new">Add a Comic</a>
+          <a href="/comics">Go Back</a>
+        </div>
+      </nav>
     </body>
 </html>

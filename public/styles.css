@@ -20,22 +20,19 @@ body {
   background-color: #39004d;
   background-attachment: fixed;
   margin-bottom: 100px;
-  /* background:
-  radial-gradient(black 15%, transparent 16%) 0 0,
-  radial-gradient(black 15%, transparent 16%) 8px 8px,
-  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px; */
 }
 
 h1 {
   font-size: 50px;
   color: #5e0080;
   text-align: center;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px 4px #0073e6;
+  font-family: 'Amatic SC', cursive;
 }
 a {
   color: hotpink;
-  /* margin: 6px; */
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .footer {
@@ -109,13 +106,40 @@ img {
 input {
   height: 38px;
   padding: 6px 10px;
-  background-color: #8c1aff;
+  background-color: #0073e6;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
 
-.submit {
-  background: red;
+.user {
+  display: block;
+  text-align: center;
+  background: black;
+  margin: 6px;
+  padding: 10px;
+  border: 6px solid white;
+}
+.buy-button,button[type=button],input[type=submit]{
+  background: #5e0080;
+  color: white;
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 27px;
+  border-radius: 4px;
+}
+.buy-button:hover,button[type=button]:hover,input[type=submit]:hover{
+  background-color:white ;
+  color:#5e0080 ;
+}
+.change-buttons {
+  display: block;
+  text-align: center;
+}
+
+::placeholder {
+  color: black;
 }
