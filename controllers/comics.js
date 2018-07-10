@@ -78,7 +78,19 @@ router.put('/:id/buy', (req,res)=>{
     res.redirect('back')
   })
 })
+//SESSIONS
+router.get('/', (req,res)=>{
+  res.render('index.ejs', {
+    currentUser: req.session.currentUser
+  })
+})
 
-
+router.get('/app', (req,res)=>{
+  if(req.session.currentUser){
+    res.send('the main');
+  } else {
+    res.redirect('/sessions/new')
+  }
+})
 //IMPORTANT
 module.exports = router;

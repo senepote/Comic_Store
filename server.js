@@ -28,9 +28,6 @@ app.use('/users', userController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
-
-
-
 app.listen(PORT, ()=>{
   console.log('listening...');
 })
