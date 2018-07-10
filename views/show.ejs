@@ -14,10 +14,14 @@
         <img src="<%=comics.img%>" alt="">
         <p><%=comics.description%></p>
         <h4>$ <%=comics.price%></h4>
-        <h4>qty: <%=comics.qty%></h4>
-
-        <button class="buy-button">Buy Now</button>
-
+        <%if(comics.qty <= 0) { %>
+          <h3> OH NO!! Temporarily (or FOREVER) OUT OF STOCK! </h3>
+          <% } else { %>
+        <h4>Qty: <%=comics.qty%></h4>
+        <form action="/comics/<%=comics.id%>/buy?_method=put" method="post">
+          <button class="buy-button">Buy Now</button>
+        </form>
+       <% } %>
       </div>
       <div class="change-buttons">
         <a href="/comics/<%=comics.id%>/edit"><button type="button" name="button" class="edit-button">Edit</button></a>

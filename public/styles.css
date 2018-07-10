@@ -21,7 +21,10 @@ body {
   background-attachment: fixed;
   margin-bottom: 100px;
 }
-
+h1:hover {
+  font-size: 50px;
+  -webkit-transform: scale(3);
+}
 h1 {
   font-size: 50px;
   color: #5e0080;
@@ -31,8 +34,13 @@ h1 {
 }
 a {
   color: hotpink;
-  padding-left: 6px;
-  padding-right: 6px;
+  /* padding-left: 6px;
+  padding-right: 6px; */
+}
+
+a:hover {
+  color: #0073e6;
+  font-size: 50px;
 }
 
 .footer {
@@ -134,12 +142,15 @@ input {
 .buy-button:hover,button[type=button]:hover,input[type=submit]:hover{
   background-color:white ;
   color:#5e0080 ;
+  font-size: 35px;
 }
 .change-buttons {
   display: block;
   text-align: center;
 }
-
+p:hover{
+  font-size: 40px;
+}
 ::placeholder {
   color: black;
 }

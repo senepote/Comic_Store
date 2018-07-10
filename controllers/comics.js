@@ -71,11 +71,13 @@ router.get('/seed', (req,res)=>{
   })
 })
 
-// router.post('/', (req,res) =>{
-//   console.log(req.body);
-//   let newComic = {}
-// })
-
+//BUY PROPERTIES
+router.put('/:id/buy', (req,res)=>{
+  Comics.findByIdAndUpdate(req.params.id, {$inc: { qty: -1 }},
+  (err)=>{
+    res.redirect('back')
+  })
+})
 
 
 //IMPORTANT
