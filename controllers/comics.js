@@ -3,6 +3,7 @@ const router = express.Router();
 const Comics = require('../models/comics.js');
 
 //SEED
+
 //JSON
 router.get('/json', (req,res) =>{
   Comics.find({}, (err, allComics)=>{
@@ -62,11 +63,19 @@ router.delete('/:id', (req,res)=>{
 })
 
 //ALT SEED
+// const comicSeed = require('../models/seed.js')
+// router.get('/seed', (req,res)=>{
+//   Comics.insertMany(comicSeed, (err, comics)=>{
+//     if (err) {console.log(err)} else {
+//       res.redirect('/comics')
+//     }
+//   })
+// })
 const comicSeed = require('../models/seed.js')
-router.get('/seed', (req,res)=>{
+router.get('/seed/newcomics', (req,res)=>{
   Comics.insertMany(comicSeed, (err, comics)=>{
     if (err) {console.log(err)} else {
-      res.redirect('/comics')
+      res.send(comics)
     }
   })
 })
