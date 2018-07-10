@@ -5,8 +5,7 @@ module.exports =  [
         img:'https://vignette.wikia.nocookie.net/marvel/images/7/77/X-Men_-1.jpg/revision/latest?cb=20121011154900&path-prefix=fr',
         price: 300,
         qty: 1
-      }
-      ,{
+      },{
         name:'Uncanny X-Men #1 (2012)',
         description:'',
         img:'https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/43540/DIG005800_1._SX360_QL80_TTD_.jpg',
@@ -48,5 +47,41 @@ module.exports =  [
         img:'https://vignette.wikia.nocookie.net/marveldatabase/images/9/92/Uncanny_X-Men_Vol_1_600_Yu_Variant.jpg/revision/latest?cb=20151002105617',
         price:5,
         qty:5
-      }
+      },{
+        name:'Wicked + Divine #16',
+        description:'',
+        img:'https://vignette.wikia.nocookie.net/wicdiv/images/e/e1/Wicdiv16.png/revision/latest?cb=20160228184715',
+        price:5,
+        qty:5
+      },{
+        name:'Wicked + Divine #36',
+        description:'',
+        img:'https://pbs.twimg.com/media/DWmQT3MXUAA8VEU.jpg',
+        price:5,
+        qty:5
+      },{
+        name:'Wicked + Divine #26',
+        description:'',
+        img:'https://imagecomics.com/uploads/releases/_main/TheWickedandtheDivine_26-1.png',
+        price:5,
+        qty:5
+      },{
+        name:'Wicked + Divine #30',
+        description:'',
+        img:'https://leagueofcomicgeeks.com/comics/covers/large/7407514-the-wicked-the-divine-30.jpg?1502078768',
+        price:5,
+        qty:5
+      },{
+        name:'Wicked + Divine: The Transubstantiation Of Lucifer',
+        description:'',
+        img:'https://pbs.twimg.com/media/DgErvv6XkAAeIWS.jpg',
+        price:5,
+        qty:5
+      },{
+        name:'',
+        description:'',
+        img:'',
+        price:5,
+        qty:5
+      },
     ]

@@ -11,7 +11,7 @@ router.post('/', (req,res)=>{
   User.findOne({username: req.body.username}, (err, foundUser)=>{
     if(req.body.password == foundUser.password){
       res.session.currentUser = foundUser;
-      res.redirect('/comics');
+      res.redirect('/');
     } else {
       res.send('wrong password')
     }
