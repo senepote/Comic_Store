@@ -7,9 +7,15 @@
     <nav>
       <% include ../partials/header %>
     </nav>
+    <% if(currentUser) { %>
+      <form action="/sessions?_method=DELETE" method="POST">
+          <input type="submit" value="Logout"/>
+      </form>
+    <% } %>
       <div id="container">
         <div class="comics">
           <% for(let i = 0; i < comics.length; i++){ %>
+
             <div class="comic">
 
             <br/>

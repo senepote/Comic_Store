@@ -16,7 +16,8 @@ router.get('/json', (req,res) =>{
 router.get('/',(req,res)=>{
   Comics.find({}, (err,allComics)=>{
     res.render('index.ejs', {
-      comics: allComics
+      comics: allComics,
+      currentUser: req.session.currentUser
     });
   });
 });
@@ -89,18 +90,19 @@ router.put('/:id/buy', (req,res)=>{
   })
 })
 //SESSIONS
-router.get('/', (req,res)=>{
-  res.render('index.ejs', {
-    currentUser: req.session.currentUser
-  })
-})
+// router.get('/', (req,res)=>{
+//   res.render('index.ejs', {
+//     currentUser: req.session.currentUser
+//   })
+// })
+//
+// router.get('/app', (req,res)=>{
+//   if(req.session.currentUser){
+//     res.send('the main');
+//   } else {
+//     res.redirect('/sessions/new')
+//   }
+// })
 
-router.get('/app', (req,res)=>{
-  if(req.session.currentUser){
-    res.send('the main');
-  } else {
-    res.redirect('/sessions/new')
-  }
-})
 //IMPORTANT
 module.exports = router;

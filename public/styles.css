@@ -32,6 +32,9 @@ h1 {
   text-shadow: 1px 1px 4px #0073e6;
   font-family: 'Amatic SC', cursive;
 }
+h3 {
+  color: #0073e6;
+}
 .nav-buttons {
   color: hotpink;
   padding-left: 6px;
@@ -84,7 +87,7 @@ img {
   text-align: center;
   padding: .3em;
   margin: .5em;
-  height: 420px;
+  height: 450px;
   background: black;
   max-width: 400px;
 }

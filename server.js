@@ -36,7 +36,20 @@ app.get('/',(req,res)=>{
 app.listen(PORT, ()=>{
   console.log('listening...');
 })
+//SESSIONS
+app.get('/', (req, res)=>{
+    res.render('index.ejs', {
+        currentUser: req.session.currentUser
+    });
+});
 
+app.get('/app', (req,res)=>{
+  if(req.session.currentUser){
+    res.send('the main');
+  } else {
+    res.redirect('/sessions/new')
+  }
+})
 
 mongoose.connect(mongoUri);
 mongoose.connection.on('open', ()=>{
