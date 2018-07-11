@@ -12,16 +12,27 @@ router.delete('/', (req,res)=>{
     res.redirect('/')
   })
 })
-
-router.post('/', (req,res)=>{
-  User.findOne({username: req.body.username}, (err, foundUser)=>{
-    if(req.body.password == foundUser.password){
-      req.session.currentUser = foundUser;
-      res.redirect('/');
-    } else {
-      res.send('wrong password')
-    }
-  })
+//BCRYPT
+router.post('/', (req, res)=>{
+    User.findOne({username:req.body.username}, (err, foundUser)=>{
+        if(bcrypt.compareSync(req.body.password, foundUser.password)){
+            req.session.currentUser = foundUser;
+            res.redirect('/');
+        } else {
+            res.send('wrong password');
+        }
+    })
 })
+
+// router.post('/', (req,res)=>{
+//   User.findOne({username: req.body.username}, (err, foundUser)=>{
+//     if(req.body.password == foundUser.password){
+//       req.session.currentUser = foundUser;
+//       res.redirect('/');
+//     } else {
+//       res.send('wrong password')
+//     }
+//   })
+// })
 
 module.exports = router;

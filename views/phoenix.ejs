@@ -6,7 +6,15 @@
     <meta charset="utf-8">
     <title>Enter The Phoenix</title>
   </head>
-  <body>
+  <body class="phoenix">
+    <h1>
+      <% if(currentUser) { %>
+          Welcome <%=currentUser.username %>
+      <% } %>
+    </h1>
 
   </body>
+  <footer>
+    <a class ="nav-buttons" href="/comics">Go Back</a>
+  </footer>
 </html>

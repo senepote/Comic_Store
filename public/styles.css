@@ -169,3 +169,11 @@ p:hover{
 ::placeholder {
   color: black;
 }
+.phoenix {
+  background-image: url("http://digitalspyuk.cdnds.net/16/20/768x432/gallery-1463417947-x-men-marvel-wolverine-phoenix-fire-3840x2160.jpg");
+  background-color: #801a00;
+}
+
+.phx {
+  height: 50px;
+}

@@ -27,8 +27,11 @@ router.get('/new',(req,res)=>{
 });
 //PHOENIX ROUTE
 router.get('/enterthephoenix', (req,res)=>{
-  res.render('phoenix.ejs')
+  res.render('phoenix.ejs', {
+    currentUser: req.session.currentUser
+  });
 });
+
 //SHOW ROUTE
 router.get('/:id', (req,res)=>{
   Comics.findById(req.params.id, (err, comics)=>{
