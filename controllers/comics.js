@@ -25,7 +25,10 @@ router.get('/',(req,res)=>{
 router.get('/new',(req,res)=>{
   res.render('new.ejs');
 });
-
+//PHOENIX ROUTE
+router.get('/enterthephoenix', (req,res)=>{
+  res.render('phoenix.ejs')
+});
 //SHOW ROUTE
 router.get('/:id', (req,res)=>{
   Comics.findById(req.params.id, (err, comics)=>{
@@ -80,6 +83,7 @@ router.get('/seed/newcomics', (req,res)=>{
     }
   })
 })
+
 
 //BUY PROPERTIES
 router.put('/:id/buy', (req,res)=>{
