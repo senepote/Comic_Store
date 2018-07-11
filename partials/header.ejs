@@ -1,13 +1,8 @@
 <nav>
   <div class="header">
+
     <h1>Comic Store</h1>
-    <h4>
-        <% if(currentUser) { %>
-            Welcome <%=currentUser.username%>!
-        <% } else { %>
-            Welcome!
-        <% } %>
-    </h4>
+
     <nav class="sign-in">
 
           <a class ="nav-buttons" href="/users/new">Register</a>

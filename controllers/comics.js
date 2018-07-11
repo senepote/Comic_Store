@@ -16,8 +16,7 @@ router.get('/json', (req,res) =>{
 router.get('/',(req,res)=>{
   Comics.find({}, (err,allComics)=>{
     res.render('index.ejs', {
-      comics: allComics,
-      currentUser: req.session.currentUser
+      comics: allComics, currentUser: req.session.currentUser
     });
   });
 });
