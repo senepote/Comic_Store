@@ -19,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-color: #39004d;
   background-attachment: fixed;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 h1:hover {
   font-size: 50px;
@@ -32,7 +32,7 @@ h1 {
   text-shadow: 1px 1px 4px #0073e6;
   font-family: 'Amatic SC', cursive;
 }
-h3 {
+h4 {
   color: #0073e6;
 }
 .nav-buttons {
@@ -113,6 +113,15 @@ img {
   font-family: 'Amatic SC', cursive;
   /* color: white; */
 }
+.logout {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: right;
+}
+
 input {
   height: 38px;
   padding: 6px 10px;

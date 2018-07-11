@@ -37,11 +37,11 @@ app.listen(PORT, ()=>{
   console.log('listening...');
 })
 //SESSIONS
-app.get('/', (req, res)=>{
-    res.render('index.ejs', {
-        currentUser: req.session.currentUser
-    });
-});
+// app.get('/', (req, res)=>{
+//     res.render('index.ejs', {
+//         currentUser: req.session.currentUser
+//     });
+// });
 
 app.get('/app', (req,res)=>{
   if(req.session.currentUser){

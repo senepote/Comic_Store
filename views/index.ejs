@@ -7,11 +7,6 @@
     <nav>
       <% include ../partials/header %>
     </nav>
-    <% if(currentUser) { %>
-      <form action="/sessions?_method=DELETE" method="POST">
-          <input type="submit" value="Logout"/>
-      </form>
-    <% } %>
       <div id="container">
         <div class="comics">
           <% for(let i = 0; i < comics.length; i++){ %>
@@ -28,6 +23,17 @@
           <% } %>
         </div>
       </div>
+      <div class="sign-in">
+        <% if(currentUser) { %>
+      <a class="nav-buttons" href="/enterthephoenix">Phoenix</a>
+        <% }%>
+      </div>
+      <% if(currentUser) { %>
+        <form class="logout" action="/sessions?_method=DELETE" method="POST">
+          <input class="logout" type="submit" value="Logout"/>
+        </form>
+      <% } %>
+
       <nav>
         <% include ../partials/footer %>
       </nav>
