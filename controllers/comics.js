@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Comics = require('../models/comics.js');
 const session = require('express-session');
-
+const Phoenix = require('../models/phoenix.js')
 //SEED
 
 //JSON
@@ -27,11 +27,12 @@ router.get('/new',(req,res)=>{
 });
 //PHOENIX ROUTE
 router.get('/enterthephoenix', (req,res)=>{
-  res.render('phoenix.ejs', {
-    currentUser: req.session.currentUser
+  Phoenix.find({}, (err,allPhoenix)=>{
+    res.render('phoenix.ejs', {
+      phoenix: allPhoenix, currentUser: req.session.currentUser
+    });
   });
 });
-
 //SHOW ROUTE
 router.get('/:id', (req,res)=>{
   Comics.findById(req.params.id, (err, comics)=>{
@@ -86,7 +87,14 @@ router.get('/seed/newcomics', (req,res)=>{
     }
   })
 })
-
+const phoenixSeed = require('../models/phoenix.js')
+router.get('/enterthephoenix/seed/newphoenix', (req,res)=>{
+  Phoenix.insertMany(phoenixSeed, (err, phoenix)=>{
+    if (err) {console.log(err)} else {
+      res.send(phoenix)
+    }
+  })
+})
 
 //BUY PROPERTIES
 router.put('/:id/buy', (req,res)=>{

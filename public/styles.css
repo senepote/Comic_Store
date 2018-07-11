@@ -91,6 +91,24 @@ img {
   background: black;
   max-width: 400px;
 }
+
+/* PHOENIX PAGE */
+#container-phoenix {
+  max-width: 70em;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.covers {
+  flex-basis: 20%;
+  text-align: center;
+  padding: .3em;
+  margin: .5em;
+  height: auto;
+  background: black;
+  max-width: 350px;
+}
+
 .showcomic {
   margin:auto;
   font-size: 25px;
