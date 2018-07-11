@@ -147,8 +147,12 @@ input {
   display: block;
   text-align: center;
 }
+p {
+  margin: 10px;
+}
 p:hover{
   font-size: 40px;
+  margin: 10px;
 }
 ::placeholder {
   color: black;

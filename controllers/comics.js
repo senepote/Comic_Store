@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Comics = require('../models/comics.js');
+const session = require('express-session');
 
 //SEED
 
