@@ -78,7 +78,6 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .comic {
@@ -94,11 +93,21 @@ img {
 
 /* PHOENIX PAGE */
 #container-phoenix {
-  max-width: 70em;
+  max-width: 80em;
   margin: auto;
   margin-top: 2em;
+  height: auto;
 }
+.comics-phoenix {
+  display: inline-flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 475px;
+  margin-right: 475px;
+  vertical-align: center;
+  flex-direction: column;
 
+}
 .covers {
   flex-basis: 20%;
   text-align: center;
@@ -108,7 +117,9 @@ img {
   background: black;
   max-width: 350px;
 }
-
+.covers:hover{
+  transform: scale(3);
+}
 .showcomic {
   margin:auto;
   font-size: 25px;
