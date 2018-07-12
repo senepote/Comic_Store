@@ -8,6 +8,13 @@
       <% include ../partials/header %>
     </nav>
       <div id="container">
+        <h2>
+            <% if(currentUser) { %>
+                Welcome <%=currentUser.username%>!
+            <% } else { %>
+                Welcome!
+            <% } %>
+        </h2>
         <div class="comics">
           <% for(let i = 0; i < comics.length; i++){ %>
 

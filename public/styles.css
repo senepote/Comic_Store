@@ -29,16 +29,28 @@ h1 {
   font-size: 50px;
   color: #5e0080;
   text-align: center;
-  text-shadow: 1px 1px 4px #0073e6;
+  text-shadow: 1px 1px 4px #b3b3cc;
   font-family: 'Amatic SC', cursive;
 }
-h4 {
+/* #0073e6 */
+h2{
   color: #0073e6;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px white;
+  font-size: 34px;
+}
+h4 {
+  /* color: #0073e6; */
+  color: white;
+  font-weight: bold;
 }
 .nav-buttons {
   color: hotpink;
   padding-left: 6px;
   padding-right: 6px;
+  font-family: 'Amatic SC', cursive;
 }
 .nav-buttons:hover {
   color: #0073e6;
